@@ -101,5 +101,5 @@ app.use((req, res, next) => {
   res.status(404).sendFile(path.join(__dirname, "public", "404.html"));
 });
 
-webServer.listen(process.env.PORT || 8080, () => console.log("Alll is ok"));
+webServer.listen(process.env.PORT || 8000, () => console.log("Alll is ok"));
 //app.listen(process.env.PORT || 8080, () => console.log('Alll is ok'))

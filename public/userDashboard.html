@@ -252,16 +252,17 @@
               <i class="bx bxs-first-aid"></i><span>All Doctors</span>
             </button>
           </a> -->
-          <hr />
-          <a href="/public/upcomingappointment">
-            <button class="sideButtons hvr-sweep-to-right">
-              <i class="bx bx-time"></i><span>Schedule Appointment</span>
-            </button>
-          </a>
+
           <hr />
           <a href="/public/userDashboard">
             <button class="sideButtons hvr-sweep-to-right">
               <i class="bx bxs-report"></i><span>My Booked Appointments</span>
+            </button>
+          </a>
+          <hr />
+          <a href="/public/patientVideo">
+            <button class="sideButtons hvr-sweep-to-right">
+              <i class="bx bx-phone"></i><span>Patient Video Call</span>
             </button>
           </a>
           <hr />
@@ -325,7 +326,7 @@
                 <div class="modal-content">
                   <div class="modal-header bg-primary">
                     <h5 class="modal-title white" id="myModalLabel160">
-                      APPOINTMENTS CONFIRMATION
+                      APPOINTMENTS CANCELATION
                     </h5>
                     <button
                       type="button"
@@ -337,88 +338,226 @@
                     </button>
                   </div>
                   <div class="modal-body">
-                    <h5>Your appointment has been confirmed.</h5>
+                    <h5>Are You Sure You Want to Cancel This Appointment</h5>
                   </div>
                   <div class="modal-footer">
-                    <button
-                      type="button"
-                      class="btn btn-light-secondary"
-                      data-dismiss="modal"
-                    >
-                      <i class="bx bx-x d-block d-sm-none"></i>
-                      <span class="d-none d-sm-block">Close</span>
-                    </button>
+                    <a href="/public/doctors">
+                      <button type="button" class="btn btn-light-secondary">
+                        <i class="bx bx-x d-block d-sm-none"></i>
+                        <span class="d-none d-sm-block">Close</span>
+                      </button>
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="row">
-              <div class="col-sm-12"></div>
 
-              <div class="col-12 dashboard-marketing-campaign card">
-                <div class="card marketing-campaigns">
+            <!-- Start booked Appointment -->
+
+            <div class="row trSlot">
+              <div class="col-sm">
+                <div class="media">
+                  <a class="pr-1" href="#">
+                    <img
+                      src="/assets/images/doctorprofile.jpg"
+                      alt="image"
+                      style="height: 60px; width: 60px; border-radius: 50%;"
+                    />
+                  </a>
                   <div>
-                    <!-- table start -->
-                    <br />
+                    <h5 class="media-heading">
+                      <b>Doctor ABC</b>
+                    </h5>
 
-                    <!-- first appointment start -->
-
-                    <div class="row trSlot">
-                      <div class="col-12 col-md-8">
-                        <h6 class="schappointment-text">
-                          07:00 PM - 07:30 PM
-                        </h6>
-                      </div>
-                      <div class="col-8 col-md-4 trRow">
-                        <button type="button" class="btn btn-primary_book">
-                          <i class="bx bxs-pencil"></i>
-                          Edit
-                        </button>
-                        <button
-                          type="button"
-                          class="btn btn-primary_book"
-                          style="margin-left: 1%;"
-                        >
-                          <i class="bx bx-x"></i>
-                          Cancel
-                        </button>
-                      </div>
-                    </div>
-
-                    <!-- first appointment end -->
-
-                    <!-- second appointment start -->
-
-                    <div class="row trSlot">
-                      <div class="col-12 col-md-8">
-                        <h6 class="schappointment-text">
-                          07:00 PM - 07:30 PM
-                        </h6>
-                      </div>
-                      <div class="col-8 col-md-4 trRow">
-                        <button
-                          type="button"
-                          class="btn btn-primary_book"
-                          data-toggle="modal"
-                          data-target="#primary"
-                        >
-                          <i class="bx bx-check"></i>
-                          Book
-                        </button>
-                      </div>
-                    </div>
-                    <!-- second appointment end -->
+                    <b>Specialization</b>: abc
                   </div>
                 </div>
               </div>
+              <div class="col-sm mid-col">
+                <i class="bx bx-time"
+                  ><b class="bold-time">May 27,2020</b
+                  ><b class="bold-time">07:00 PM</b></i
+                >
+              </div>
+              <div class="col-sm trRow">
+                <a href="/public/upcomingappointment">
+                  <button type="button" class="btn btn-primary_book">
+                    <i class="bx bxs-pencil"></i>
+                    Edit
+                  </button>
+                </a>
+                <button
+                  type="button"
+                  class="btn btn-primary_book"
+                  data-toggle="modal"
+                  data-target="#primary"
+                  style="margin-left: 1%;"
+                >
+                  <i class="bx bx-check"></i>
+                  Cancel
+                </button>
+              </div>
             </div>
+
+            <!-- end booked Appointment -->
+
+            <!-- second Appointments -->
+
+            <!-- Start booked Appointment -->
+
+            <div class="row trSlot">
+              <div class="col-sm">
+                <div class="media">
+                  <a class="pr-1" href="#">
+                    <img
+                      src="/assets/images/doctorprofile.jpg"
+                      alt="image"
+                      style="height: 60px; width: 60px; border-radius: 50%;"
+                    />
+                  </a>
+                  <div>
+                    <h5 class="media-heading">
+                      <b>Doctor ABC</b>
+                    </h5>
+
+                    <b>Specialization</b>: abc
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm mid-col">
+                <i class="bx bx-time"
+                  ><b class="bold-time">May 27,2020</b
+                  ><b class="bold-time">07:30 PM</b></i
+                >
+              </div>
+              <div class="col-sm trRow">
+                <a href="/public/upcomingappointment">
+                  <button type="button" class="btn btn-primary_book">
+                    <i class="bx bxs-pencil"></i>
+                    Edit
+                  </button>
+                </a>
+                <button
+                  type="button"
+                  class="btn btn-primary_book"
+                  data-toggle="modal"
+                  data-target="#primary"
+                  style="margin-left: 1%;"
+                >
+                  <i class="bx bx-check"></i>
+                  Cancel
+                </button>
+              </div>
+            </div>
+
+            <!-- end booked Appointment -->
+
+            <!-- third booked Appointment -->
+            <!-- Start booked Appointment -->
+
+            <div class="row trSlot">
+              <div class="col-sm">
+                <div class="media">
+                  <a class="pr-1" href="#">
+                    <img
+                      src="/assets/images/doctorprofile.jpg"
+                      alt="image"
+                      style="height: 60px; width: 60px; border-radius: 50%;"
+                    />
+                  </a>
+                  <div>
+                    <h5 class="media-heading">
+                      <b>Doctor ABC</b>
+                    </h5>
+
+                    <b>Specialization</b>: abc
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm mid-col">
+                <i class="bx bx-time"
+                  ><b class="bold-time">June 27,2020</b
+                  ><b class="bold-time">09:00 PM</b></i
+                >
+              </div>
+              <div class="col-sm trRow">
+                <a href="/public/upcomingappointment">
+                  <button type="button" class="btn btn-primary_book">
+                    <i class="bx bxs-pencil"></i>
+                    Edit
+                  </button>
+                </a>
+                <button
+                  type="button"
+                  class="btn btn-primary_book"
+                  data-toggle="modal"
+                  data-target="#primary"
+                  style="margin-left: 1%;"
+                >
+                  <i class="bx bx-check"></i>
+                  Cancel
+                </button>
+              </div>
+            </div>
+
+            <!-- end booked Appointment -->
+
+            <!-- fourth booked Appointment -->
+
+            <!-- Start booked Appointment -->
+
+            <div class="row trSlot">
+              <div class="col-sm">
+                <div class="media">
+                  <a class="pr-1" href="#">
+                    <img
+                      src="/assets/images/doctorprofile.jpg"
+                      alt="image"
+                      style="height: 60px; width: 60px; border-radius: 50%;"
+                    />
+                  </a>
+                  <div>
+                    <h5 class="media-heading">
+                      <b>Doctor ABC</b>
+                    </h5>
+
+                    <b>Specialization</b>: abc
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm mid-col">
+                <i class="bx bx-time"
+                  ><b class="bold-time">Sep 27,2020</b
+                  ><b class="bold-time">10:00 PM</b></i
+                >
+              </div>
+              <div class="col-sm trRow">
+                <a href="/public/upcomingappointment">
+                  <button type="button" class="btn btn-primary_book">
+                    <i class="bx bxs-pencil"></i>
+                    Edit
+                  </button>
+                </a>
+                <button
+                  type="button"
+                  class="btn btn-primary_book"
+                  data-toggle="modal"
+                  data-target="#primary"
+                  style="margin-left: 1%;"
+                >
+                  <i class="bx bx-check"></i>
+                  Cancel
+                </button>
+              </div>
+            </div>
+            <br />
+
+            <!-- end booked Appointment -->
           </section>
 
+          <br />
           <!-- MY APPOINTMENTS ENDS -->
-
-          <!-- calendar Wrapper  -->
         </div>
-        <!-- CALENDER END -->
       </div>
     </div>
 
@@ -426,8 +565,6 @@
 
     <!-- END: Content-->
 
-    <!-- BEGIN: JS-->
-    <!-- BEGIN: Vendor JS-->
     <script src="/js/vendors.min.js"></script>
 
     <!-- BEGIN Vendor JS-->
