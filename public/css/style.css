@@ -330,7 +330,7 @@ body.vertical-layout.vertical-menu-modern.menu-expanded .main-menu,
 
 .media-body {
   background-image: url(../assets/img.png);
-  background-size: 224px 186px;
+  background-size: 200px 180px;
   background-position: right top;
   background-repeat: no-repeat;
   background-color: #fff;
@@ -818,4 +818,20 @@ tr.shown td.details-control {
 
 .odd td {
   text-align: left;
+}
+
+.btn-patient-dashboard {
+  margin-right: -7px !important;
+}
+
+.doc-img {
+  display: inline-block;
+  align-self: stretch;
+}
+
+.doc-img img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  vertical-align: unset;
 }

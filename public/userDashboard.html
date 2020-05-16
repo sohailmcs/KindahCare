@@ -307,50 +307,66 @@
             </div>
           </div>
           <br />
-
-          <div class="row">
-            <div class="col-lg-6">
-              <!-- calendar view start  -->
-              <div class="calendar-view card">
-                <div id="scheduler"></div>
-              </div>
-              <!-- calendar view end  -->
-            </div>
-            <div class="col-lg-6">
-              <!-- MY APPOINTMENTS START -->
-
+          <!-- MY APPOINTMENTS START -->
+          <section>
+            <!--primary theme Modal -->
+            <div
+              class="modal fade text-left"
+              id="primary"
+              tabindex="-1"
+              role="dialog"
+              aria-labelledby="myModalLabel160"
+              aria-hidden="true"
+            >
               <div
-                class="col-12 dashboard-marketing-campaign card right-card-calender-user"
+                class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+                role="document"
               >
-                <div class="card marketing-campaigns">
-                  <div
-                    class="card-header d-flex justify-content-between align-items-center pb-1"
-                  >
-                    <h5 class="card-title">YOUR BOOKED APPOINTMENTS</h5>
+                <div class="modal-content">
+                  <div class="modal-header bg-primary">
+                    <h5 class="modal-title white" id="myModalLabel160">
+                      APPOINTMENTS CONFIRMATION
+                    </h5>
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <i class="bx bx-x"></i>
+                    </button>
                   </div>
+                  <div class="modal-body">
+                    <h5>Your appointment has been confirmed.</h5>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-light-secondary"
+                      data-dismiss="modal"
+                    >
+                      <i class="bx bx-x d-block d-sm-none"></i>
+                      <span class="d-none d-sm-block">Close</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12"></div>
 
+              <div class="col-12 dashboard-marketing-campaign card">
+                <div class="card marketing-campaigns">
                   <div>
                     <!-- table start -->
-                    <div class="col-sm-12 selectedDt">
-                      <script>
-                        var options = {
-                          weekday: "long",
-                          year: "numeric",
-                          month: "long",
-                          day: "numeric",
-                        };
-                        document.write(
-                          new Date().toLocaleDateString("en-US", options)
-                        );
-                      </script>
-                    </div>
+                    <br />
 
                     <!-- first appointment start -->
 
                     <div class="row trSlot">
                       <div class="col-12 col-md-8">
                         <h6 class="schappointment-text">
-                          Dr Ghada Ameen Throat Specialist 07:00 PM - 07:30 PM
+                          07:00 PM - 07:30 PM
                         </h6>
                       </div>
                       <div class="col-8 col-md-4 trRow">
@@ -376,21 +392,18 @@
                     <div class="row trSlot">
                       <div class="col-12 col-md-8">
                         <h6 class="schappointment-text">
-                          Dr Ghada Ameen Throat Specialist 07:00 PM - 07:30 PM
+                          07:00 PM - 07:30 PM
                         </h6>
                       </div>
                       <div class="col-8 col-md-4 trRow">
-                        <button type="button" class="btn btn-primary_book">
-                          <i class="bx bxs-pencil"></i>
-                          Edit
-                        </button>
                         <button
                           type="button"
                           class="btn btn-primary_book"
-                          style="margin-left: 1%;"
+                          data-toggle="modal"
+                          data-target="#primary"
                         >
-                          <i class="bx bx-x"></i>
-                          Cancel
+                          <i class="bx bx-check"></i>
+                          Book
                         </button>
                       </div>
                     </div>
@@ -398,9 +411,11 @@
                   </div>
                 </div>
               </div>
-              <!-- MY APPOINTMENTS ENDS -->
             </div>
-          </div>
+          </section>
+
+          <!-- MY APPOINTMENTS ENDS -->
+
           <!-- calendar Wrapper  -->
         </div>
         <!-- CALENDER END -->
