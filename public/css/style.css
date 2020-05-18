@@ -792,8 +792,11 @@ body.vertical-layout.vertical-menu-modern.menu-expanded .main-menu,
 .head-weekdays {
   background-color: #3eb8d7;
   padding: 8px;
-  text-align: center;
+}
+
+.head-weekdays-bold {
   color: #ffffff;
+  margin-left: 5px;
 }
 
 .shift-col-top {
