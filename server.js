@@ -10,10 +10,6 @@ process.title = "node-easyrtc";
 app.set("view engine", "ejs");
 app.set("views", "views");
 
-//Connecting html pages routes from router file
-// const htmlFile = require("./Routes/routes");
-// app.use(htmlFile);
-
 var webServer = http.createServer(app);
 
 const KindahRoutes = require("./Routes/routes");
@@ -107,9 +103,9 @@ app.use(KindahRoutes);
 app.use(AuthRoutes);
 
 //in case of page not existing put error 404
-// app.use((req, res, next) => {
-//   res.status(404).sendFile(path.join(__dirname, "public", "404.html"));
-// });
+app.use((req, res, next) => {
+  res.status(404).sendFile(path.join(__dirname, "public", "404.html"));
+});
 
 webServer.listen(process.env.PORT || 8000, () => console.log("Alll is ok"));
 //app.listen(process.env.PORT || 8080, () => console.log('Alll is ok'))
