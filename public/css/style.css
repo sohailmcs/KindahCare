@@ -49,6 +49,10 @@ h6,
   color: #3eb8d7;
 }
 
+.page-heading {
+  padding: 8px;
+}
+
 .sidebaricon {
   font-size: 1.2rem;
   margin-left: 2px;
