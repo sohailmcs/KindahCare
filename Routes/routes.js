@@ -29,6 +29,7 @@ router.get("/kindahPatients", KindahController.getKindahPatients);
 
 router.get("/docVideoCall", KindahController.getDoctorVideoCall);
 
+router.get("/docEditProfile", KindahController.getDoctorEditProfile);
 // video page
 // router.get("/public/video", (req, res, next) => {
 //   res.sendFile(path.join(__dirname, "../", "public", "video.html"));

@@ -67,3 +67,9 @@ exports.getDoctorVideoCall = (req, res, next) => {
     pageTitle: "Doctor Video  ",
   });
 };
+
+exports.getDoctorEditProfile = (req, res, next) => {
+  res.render("Doctor/docEditProfile.ejs", {
+    pageTitle: "Edit Profile",
+  });
+};

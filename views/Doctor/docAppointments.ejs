@@ -1,17 +1,31 @@
-<%- include('docIncludes/docHead.ejs') %>
+<%- include('../Includes/Head.ejs') %>
 
+    <!-- BEGIN: Vendor CSS-->
+    <link rel="stylesheet" type="text/css" href="/css/vendors.min.css" />
     <link href="/css/KendoUi/examples-offline.css" rel="stylesheet" />
     <link href="/css/KendoUi/kendo.common.min.css" rel="stylesheet" />
     <link href="/css/KendoUi/kendo.default.min.css" rel="stylesheet" />
     <link href="/css/KendoUi/kendo.default.mobile.min.css" rel="stylesheet" />
-
+    
     <link rel="stylesheet" type="text/css" href="/css/pickadate.css" />
     <link rel="stylesheet" type="text/css" href="/css/daterangepicker.css" />
-
-    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    
+    <!-- END: Vendor CSS-->
+    
+    <!-- BEGIN: Theme CSS-->
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap-extended.css" />
+    <link rel="stylesheet" type="text/css" href="/css/colors.css" />
     <link rel="stylesheet" type="text/css" href="/css/components.css" />
-        <link rel="stylesheet" type="text/css" href="/css/vertical-menu.css" />
-
+    
+    <!-- END: Theme CSS-->
+    
+    <!-- BEGIN: Page CSS-->
+    <link rel="stylesheet" type="text/css" href="/css/vertical-menu.css" />
+    <!-- END: Page CSS-->
+    
+    <!-- BEGIN: Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
     <!-- END: Vendor CSS-->
   </head>
   <!-- END: Head-->
@@ -19,10 +33,10 @@
   <!-- BEGIN: Body-->
 
 <!-- body tag and blue nav bar  -->
-  <%- include('docIncludes/docNav.ejs') %>
+  <%- include('../Includes/docNav.ejs') %>
 
    <!-- complete side menu of doctor -->
-    <%- include('docIncludes/docSideMenu.ejs') %>
+    <%- include('../Includes/docSideMenu.ejs') %>
 
     <!-- BEGIN: Content-->
     <hr />
@@ -855,4 +869,4 @@
     </script>
 
 <!-- closing tag of html and body -->
-<%- include('docIncludes/docEnd.ejs') %>
+<%- include('../Includes/End.ejs') %>
