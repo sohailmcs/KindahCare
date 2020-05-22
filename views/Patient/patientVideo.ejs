@@ -33,23 +33,29 @@
 
 <!-- complete side menu of doctor -->
 <%- include('../Includes/patientSideMenu.ejs') %>
-    <!-- BEGIN: Content-->
-    <hr />
+    
     <div class="app-content content">
       <div class="content-overlay"></div>
       <div class="content-wrapper">
         <div class="content-header row"></div>
         <div class="content-body">
           <div class="d-flex flex-row">
-            <h3>Patient Video Call</h3>
+            <h3 style="margin-top: 9px;">Patient Video Call</h3>
           </div>
 
           <div class="card">
-            <div>
-              <h5 class="call-heading"><b>Call with Doctor ABC</b></h5>
-
-              <img src="/assets/images/maledoc.png" class="docvideo" />
+            
+            <div class="pat-video-card">
+                <div class="pat-call" >
+                  <h3 class="call-heading">
+                   Call With Doctor ABC</h3>
+                </div>
+               
+                <div >
+                  <img src="/assets/images/maledoc.png" class="docvideo" />
+                </div>
             </div>
+           
 
             <div class="videoimagediv">
               <img src="/assets/images/landscap-doc.png" class="videoimage" />
@@ -59,7 +65,7 @@
             <div style="text-align: center;">
               <p>Time Duration: 09:10:60</p>
             </div>
-            <br />
+            
             <div class="icons">
               <button
                 type="button"

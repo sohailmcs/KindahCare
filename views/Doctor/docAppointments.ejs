@@ -109,7 +109,17 @@
                               </div>
                               <div class="modal-body">
                                 <div class="sch-app-head">
-                                  <h5><b>06 , 2020 May</b></h5>
+                                  <script>
+                                    var options = {
+                                      weekday: "long",
+                                      year: "numeric",
+                                      month: "long",
+                                      day: "numeric",
+                                    };
+                                    document.write(
+                                      new Date().toLocaleDateString("en-US", options)
+                                    );
+                                  </script>
                                 </div>
 
                                 <fieldset>
@@ -140,7 +150,7 @@
                                 <br />
                                 <div class="edit-sch-popup">
                                   <div class="head-weekdays">
-                                    <b>Sunday</b>
+                                    <b class="shift">Sunday</b>
                                   </div>
                                   <br />
                                   <div class="timers">
@@ -469,7 +479,7 @@
           </div>
 
           <div class="row">
-            <div class="col">
+            <div class="col-md-4">
               <label>From Date</label>
               <fieldset class="form-group position-relative has-icon-left">
                 <input
@@ -482,7 +492,7 @@
                 </div>
               </fieldset>
             </div>
-            <div class="col">
+            <div class="col-md-4">
               <label>To Date</label>
               <fieldset class="form-group position-relative has-icon-left">
                 <input
@@ -495,7 +505,7 @@
                 </div>
               </fieldset>
             </div>
-            <div class="col">
+            <div class="col-md-4">
               <fieldset>
                 <label for="Slot-time">Slot Time (Minutes)</label>
                 <select name="Slot-time" id="Slot-time" class="form-control">
@@ -507,10 +517,11 @@
               </fieldset>
             </div>
           </div>
+          <br/>
           <div class="row sch-row">
             <div class="col-xs-3 sch-app">
               <div class="head-weekdays">
-                <b>Shift</b>
+                <b class="shift">First Shift</b>
               </div>
 
               <p class="shift-col-top">
@@ -526,9 +537,9 @@
               <div class="head-weekdays">
                 <fieldset>
                   <div>
-                    <input type="checkbox" value="yes" />
-                    <label><b class="head-weekdays-bold">Saturday</b></label>
-                  </div>
+                    <input type="checkbox" class="larger" name="checkBox2">
+                    <b class="head-weekdays-bold">Saturday</b>
+                
                 </fieldset>
               </div>
               <br />
@@ -560,11 +571,9 @@
               <div class="head-weekdays">
                 <fieldset>
                   <div>
-                    <input type="checkbox" value="yes" />
-                    <label for="checkbox2"
-                      ><b class="head-weekdays-bold">Sunday</b></label
-                    >
-                  </div>
+                    <input type="checkbox" class="larger" name="checkBox2">
+                    <b class="head-weekdays-bold">Sunday</b>
+                
                 </fieldset>
               </div>
               <br />
@@ -596,12 +605,9 @@
             <div class="col-xs-3 sch-app">
               <div class="head-weekdays">
                 <fieldset>
-                  <div class="checkbox">
-                    <input type="checkbox" class="checkbox-input" value="yes" />
-                    <label for="checkbox2"
-                      ><b class="head-weekdays-bold">Monday</b></label
-                    >
-                  </div>
+                  <div >
+                      <input type="checkbox" class="larger" name="checkBox2">
+                    <b class="head-weekdays-bold">Monday</b>
                 </fieldset>
               </div>
               <br />
@@ -633,16 +639,11 @@
             <div class="col-xs-3 sch-app">
               <div class="head-weekdays">
                 <fieldset>
-                  <div class="checkbox">
-                    <input
-                      type="checkbox"
-                      class="checkbox-input"
-                      id="checkbox2"
-                    />
-                    <label for="checkbox2"
-                      ><b class="head-weekdays-bold">Tuesday</b></label
-                    >
-                  </div>
+                  <div>
+                    <input type="checkbox" class="larger" name="checkBox2">
+                    <b class="head-weekdays-bold">Tuesday</b>
+                
+                
                 </fieldset>
               </div>
               <br />
@@ -674,16 +675,11 @@
             <div class="col-xs-3 sch-app">
               <div class="head-weekdays">
                 <fieldset>
-                  <div class="checkbox">
-                    <input
-                      type="checkbox"
-                      class="checkbox-input"
-                      id="checkbox2"
-                    />
-                    <label for="checkbox2"
-                      ><b class="head-weekdays-bold">Wednesday</b></label
-                    >
-                  </div>
+                  <div>
+                    <input type="checkbox" class="larger" name="checkBox2">
+                    <b class="head-weekdays-bold">Wednesday</b>
+                
+                
                 </fieldset>
               </div>
               <br />
@@ -715,16 +711,11 @@
             <div class="col-xs-3 sch-app">
               <div class="head-weekdays">
                 <fieldset>
-                  <div class="checkbox">
-                    <input
-                      type="checkbox"
-                      class="checkbox-input"
-                      id="checkbox2"
-                    />
-                    <label for="checkbox2"
-                      ><b class="head-weekdays-bold">Thursday</b></label
-                    >
-                  </div>
+                  <div>
+                    <input type="checkbox" class="larger" name="checkBox2">
+                    <b class="head-weekdays-bold">Thursday</b>
+                
+                
                 </fieldset>
               </div>
               <br />
@@ -756,16 +747,11 @@
             <div class="col-xs-3 sch-app">
               <div class="head-weekdays">
                 <fieldset>
-                  <div class="checkbox">
-                    <input
-                      type="checkbox"
-                      class="checkbox-input"
-                      id="checkbox2"
-                    />
-                    <label for="checkbox2"
-                      ><b class="head-weekdays-bold">Friday</b></label
-                    >
-                  </div>
+                  <div>
+                    <input type="checkbox" class="larger" name="checkBox2">
+                    <b class="head-weekdays-bold">Friday</b>
+                
+                
                 </fieldset>
               </div>
               <br />
@@ -795,8 +781,222 @@
             </div>
           </div>
           <br />
-          <br />
-          <br />
+
+            <div class="row sch-row">
+              <div class="col-xs-3 sch-app">
+                <div class="head-weekdays">
+                  <b class="shift">Second Shift</b>
+                </div>
+            
+                <p class="shift-col-top">
+                  Start Time
+                </p>
+                <hr />
+            
+                <p class="shift-col-bottom">
+                  End Time
+                </p>
+              </div>
+              <div class="col-xs-3 sch-app">
+                <div class="head-weekdays">
+                  <fieldset>
+                    <div>
+                      <input type="checkbox" class="larger" name="checkBox2">
+                      <b class="head-weekdays-bold">Saturday</b>
+            
+                  </fieldset>
+                </div>
+                <br />
+                <div class="timers">
+                  <fieldset class="form-group position-relative has-icon-left">
+                    <input type="text" class="form-control pickatime" placeholder="Start" />
+                    <div class="form-control-position">
+                      <i class="bx bx-history"></i>
+                    </div>
+                  </fieldset>
+            
+                  <fieldset class="form-group position-relative has-icon-left">
+                    <input type="text" class="form-control pickatime" placeholder="End" />
+                    <div class="form-control-position">
+                      <i class="bx bx-history"></i>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+              <div class="col-xs-3 sch-app">
+                <div class="head-weekdays">
+                  <fieldset>
+                    <div>
+                      <input type="checkbox" class="larger" name="checkBox2">
+                      <b class="head-weekdays-bold">Sunday</b>
+            
+                  </fieldset>
+                </div>
+                <br />
+                <div class="timers">
+                  <fieldset class="form-group position-relative has-icon-left">
+                    <input type="text" class="form-control pickatime" placeholder="Start" />
+                    <div class="form-control-position">
+                      <i class="bx bx-history"></i>
+                    </div>
+                  </fieldset>
+            
+                  <fieldset class="form-group position-relative has-icon-left">
+                    <input type="text" class="form-control pickatime" placeholder="End" />
+                    <div class="form-control-position">
+                      <i class="bx bx-history"></i>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+            
+              <div class="col-xs-3 sch-app">
+                <div class="head-weekdays">
+                  <fieldset>
+                    <div>
+                      <input type="checkbox" class="larger" name="checkBox2">
+                      <b class="head-weekdays-bold">Monday</b>
+                  </fieldset>
+                </div>
+                <br />
+                <div class="timers">
+                  <fieldset class="form-group position-relative has-icon-left">
+                    <input type="text" class="form-control pickatime" placeholder="Start" />
+                    <div class="form-control-position">
+                      <i class="bx bx-history"></i>
+                    </div>
+                  </fieldset>
+            
+                  <fieldset class="form-group position-relative has-icon-left">
+                    <input type="text" class="form-control pickatime" placeholder="End" />
+                    <div class="form-control-position">
+                      <i class="bx bx-history"></i>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+            
+              <div class="col-xs-3 sch-app">
+                <div class="head-weekdays">
+                  <fieldset>
+                    <div>
+                      <input type="checkbox" class="larger" name="checkBox2">
+                      <b class="head-weekdays-bold">Tuesday</b>
+            
+            
+                  </fieldset>
+                </div>
+                <br />
+                <div class="timers">
+                  <fieldset class="form-group position-relative has-icon-left">
+                    <input type="text" class="form-control pickatime" placeholder="Start" />
+                    <div class="form-control-position">
+                      <i class="bx bx-history"></i>
+                    </div>
+                  </fieldset>
+            
+                  <fieldset class="form-group position-relative has-icon-left">
+                    <input type="text" class="form-control pickatime" placeholder="End" />
+                    <div class="form-control-position">
+                      <i class="bx bx-history"></i>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+            
+              <div class="col-xs-3 sch-app">
+                <div class="head-weekdays">
+                  <fieldset>
+                    <div>
+                      <input type="checkbox" class="larger" name="checkBox2">
+                      <b class="head-weekdays-bold">Wednesday</b>
+            
+            
+                  </fieldset>
+                </div>
+                <br />
+                <div class="timers">
+                  <fieldset class="form-group position-relative has-icon-left">
+                    <input type="text" class="form-control pickatime" placeholder="Start" />
+                    <div class="form-control-position">
+                      <i class="bx bx-history"></i>
+                    </div>
+                  </fieldset>
+            
+                  <fieldset class="form-group position-relative has-icon-left">
+                    <input type="text" class="form-control pickatime" placeholder="End" />
+                    <div class="form-control-position">
+                      <i class="bx bx-history"></i>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+            
+              <div class="col-xs-3 sch-app">
+                <div class="head-weekdays">
+                  <fieldset>
+                    <div>
+                      <input type="checkbox" class="larger" name="checkBox2">
+                      <b class="head-weekdays-bold">Thursday</b>
+            
+            
+                  </fieldset>
+                </div>
+                <br />
+                <div class="timers">
+                  <fieldset class="form-group position-relative has-icon-left">
+                    <input type="text" class="form-control pickatime" placeholder="Start" />
+                    <div class="form-control-position">
+                      <i class="bx bx-history"></i>
+                    </div>
+                  </fieldset>
+            
+                  <fieldset class="form-group position-relative has-icon-left">
+                    <input type="text" class="form-control pickatime" placeholder="End" />
+                    <div class="form-control-position">
+                      <i class="bx bx-history"></i>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+            
+              <div class="col-xs-3 sch-app">
+                <div class="head-weekdays">
+                  <fieldset>
+                    <div>
+                      <input type="checkbox" class="larger" name="checkBox2">
+                      <b class="head-weekdays-bold">Friday</b>
+            
+            
+                  </fieldset>
+                </div>
+                <br />
+                <div class="timers">
+                  <fieldset class="form-group position-relative has-icon-left">
+                    <input type="text" class="form-control pickatime" placeholder="Start" />
+                    <div class="form-control-position">
+                      <i class="bx bx-history"></i>
+                    </div>
+                  </fieldset>
+            
+                  <fieldset class="form-group position-relative has-icon-left">
+                    <input type="text" class="form-control pickatime" placeholder="End" />
+                    <div class="form-control-position">
+                      <i class="bx bx-history"></i>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+            <br />
+
+            <div style="float: right;">
+            <button type="button" class="btn btn-outline-primary round mr-1 mb-1">
+              <i class="bx bxs-save"></i>
+              Save Shifts
+            </button>
+            </div>
+          
         </div>
       </div>
     </div>
