@@ -23,9 +23,7 @@
 
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
-    <link rel="stylesheet" type="text/css" href="/css/dropzone.css" />
-    <link rel="stylesheet" type="text/css" href="/css/prism.min.css" />
-    <link rel="stylesheet" type="text/css" href="/css/dropzone.min.css" />
+  
 
     <!-- END: Custom CSS-->
 </head>
@@ -45,9 +43,11 @@
     <div class="app-content content">
         <div class="content-wrapper">
             <div class="content-body">
-                <div>
-                    <br />
-                    <h3><b>EDIT PROFILE</b></h3>
+                <br/>
+                <div class="d-flex flex-row">
+                    <div class="page-heading">
+                        <h3>EDIT DOCTOR PROFILE</h3>
+                    </div>
                 </div>
                 <!-- basic info -->
                 <section class="multiple-validation">
@@ -176,12 +176,17 @@
                                                 </div>
 
                                                 <div class="col-sm-6">
-                                                    <form action="#" class="dropzone dropzone-area"
-                                                        id="dpz-multiple-files">
-                                                        <div class="dz-message">
-                                                            Drop Files Here To Upload
+                                                    <div class="form-group"> <form id="my-awesome-dropzone" action="/upload" class="dropzone">
+                                                        <div class="dropzone-previews"></div>
+                                                        <div class="fallback">
+                                                            <!-- this is the fallback if JS isn't working -->
+                                                            <input name="file" type="file" multiple />
                                                         </div>
+                                                    
                                                     </form>
+                                                    <br />
+                                                    <button type="submit" id="submit-all" class="btn btn-primary btn-xs">Upload the file</button></div>
+                                           
                                                 </div>
                                             </div>
                                         </div>
@@ -551,6 +556,29 @@
     <!-- BEGIN: Content-->
 
     <!-- END: Content-->
+    <script>
+        Dropzone.options.myAwesomeDropzone = { // The camelized version of the ID of the form element
+
+                // The configuration we've talked about above
+                autoProcessQueue: false,
+                uploadMultiple: true,
+                parallelUploads: 25,
+                maxFiles: 25,
+
+                // The setting up of the dropzone
+                init: function () {
+                    var myDropzone = this;
+
+                    // Here's the change from enyo's tutorial...
+
+                    $("#submit-all").click(function (e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        myDropzone.processQueue();
+                    });
+                }
+            }
+    </script>
 
     <!-- BEGIN: JS-->
     <!-- BEGIN: Vendor JS-->
@@ -562,14 +590,14 @@
     <script src="/js/app-menu.js"></script>
     <script src="/js/app.js"></script>
 
+    
+
     <!-- END: Theme JS-->
 
     <script src="/js/form-repeater.js"></script>
     <script src="/js/jquery.repeater.min.js"></script>
 
-    <script src="/js/dropzone.min.js"></script>
-    <script src="/js/prism.min.js"></script>
-    <script src="/js/dropzone.js"></script>
+ 
 
     <!-- END: JS-->
 <%- include('../Includes/End.ejs') %>
