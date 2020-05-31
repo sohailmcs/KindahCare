@@ -615,7 +615,7 @@ body.vertical-layout.vertical-menu-modern.menu-expanded .main-menu,
 
 .videoimage {
   height: fit-content;
-  width: 70%;
+  width: 100%;
 }
 
 .docvideo {
@@ -631,6 +631,14 @@ body.vertical-layout.vertical-menu-modern.menu-expanded .main-menu,
 .pat-call {
   padding-top: 22px;
   width: -webkit-fill-available;
+}
+
+.video-call-header {
+  background-color: #3eb8d7;
+}
+
+.video-call-body {
+  padding: 7px;
 }
 
 .btn-microphone {
