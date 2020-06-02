@@ -1,3 +1,5 @@
+import { rejectLimit } from "async";
+
 $(document).ready(function () {
   $(".slide-left").click(function () {
     if ($(window).width() <= 992) {
