@@ -32,7 +32,7 @@
 
       <li>
         <label class="switch">
-          <input type="checkbox" onclick="myFunction()" />
+          <input type="checkbox" onclick="OnlineOffline()" />
           <span class="slider round">
             <div id="myDIV" class="btn-text">Online</div>
           </span>
@@ -74,7 +74,7 @@
 </div>
 
 <script>
-  function myFunction() {
+  function OnlineOffline() {
     var x = document.getElementById("myDIV");
 
     if (x.innerHTML === "Online") {

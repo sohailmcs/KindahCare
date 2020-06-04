@@ -19,8 +19,31 @@
       rel="stylesheet"
     />
 
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+
     <title><%= pageTitle %></title>
 
     <!-- common CSS -->
   </head>
+
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        {
+          pageLanguage: "en",
+          includedLanguages: "en,ar",
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+          autoDisplay: false,
+        },
+        "google_translate_element"
+      );
+    }
+  </script>
+
+  <script>
+    // alert("hello");
+    // document.querySelectorAll(".page-heading").innerHTML = "hello";
+    var getParent = document.getElementsByClassName(".page-heading");
+    getParent.children[0].innerHTML = "hello";
+  </script>
 </html>

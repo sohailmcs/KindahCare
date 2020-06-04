@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html class="loading" lang="en" data-textdirection="ltr">
-  <!-- BEGIN: Head-->
+
 
 <%- include('../Includes/Head.ejs') %>
 
@@ -27,85 +25,61 @@
   </head>
   <!-- END: Head-->
 
-
-<!-- body tag and blue nav bar  -->
-<%- include('../Includes/patientNav.ejs') %>
-
-<!-- complete side menu of doctor -->
-<%- include('../Includes/patientSideMenu.ejs') %>
     
-    <div class="app-content content">
+    <div style="padding: 3%;">
       <div class="content-overlay"></div>
       <div class="content-wrapper">
         <div class="content-header row"></div>
         <div class="content-body">
-          <div class="mr-1 mb-1 d-inline-block">
-            <!-- Button trigger for Extra Large  modal -->
-            <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#xlarge">
-              Extra Large Modal
-            </button>
-          
-            <!--Extra Large Modal -->
-            <div class="modal fade text-left w-100" id="xlarge" tabindex="-1" role="dialog" aria-labelledby="myModalLabel16"
-              aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl" role="document">
-                <div class="modal-content">
-                  <div class="modal-header video-call-header">
-                    <h4 class="modal-title" id="myModalLabel16" style="color: #fff;">
-                      CALL WITH DOCTOR 
-                    </h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <i class="bx bx-x"></i>
-                    </button>
-                  </div>
-                  <div class="modal-body video-call-body" >
-                    <div>
-                    
-                      <div class="pat-video-card">
-                        <div class="pat-call">
-                          <div class="call-heading">
-                           <h3>Call With Doctor ABC</h3>
-                            <p>ENT Specialist</p></div>
-                         
-                        </div>
-                    
-                        <div>
-                          <img src="/assets/images/maledoc.png" class="docvideo" />
-                        </div>
-                      </div>
-                    
-                    
-                      <div class="videoimagediv">
-                        <img src="/assets/images/landscap-doc.png" class="videoimage" />
-                      </div>
-                    
-                      <br />
-                      <div style="text-align: center;">
-                        <p>Time Duration: 09:10:60</p>
-                      </div>
-                    
-                      <div class="icons">
-                        <button type="button" class="btn btn-icon rounded-circle btn-outline-primary mr-1 mb-1 btn-lg btn-microphone">
-                          <i class="bx bx-microphone icon-size icon-microphone"></i>
-                        </button>
-                    
-                        <button type="button" class="btn btn-icon rounded-circle btn-outline-primary mr-1 mb-1 btn-lg">
-                          <i class="bx bx-video icon-size"></i>
-                        </button>
-                        <button type="button" class="btn btn-icon rounded-circle btn-outline-danger mr-1 mb-1 btn-lg">
-                          <i class="bx bx-phone-call icon-size"></i>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                 
-                </div>
-              </div>
-            </div>
+          <div class="d-flex flex-row">
+            <h3 style="margin-top: 9px;">Patient Video Call</h3>
           </div>
 
+          <div class="card">
+            
+            <div class="pat-video-card">
+                <div class="pat-call" >
+                  <h3 class="call-heading">
+                   Call With Doctor ABC</h3>
+                </div>
+               
+                <div >
+                  <img src="/assets/images/maledoc.png" class="docvideo" />
+                </div>
+            </div>
+           
 
-        
+            <div class="videoimagediv">
+              <img src="/assets/images/landscap-doc.png" class="videoimage" />
+            </div>
+
+            <br />
+            <div style="text-align: center;">
+              <p>Time Duration: 09:10:60</p>
+            </div>
+            
+            <div class="icons">
+              <button
+                type="button"
+                class="btn btn-icon rounded-circle btn-outline-primary mr-1 mb-1 btn-lg btn-microphone"
+              >
+                <i class="bx bx-microphone icon-size icon-microphone"></i>
+              </button>
+
+              <button
+                type="button"
+                class="btn btn-icon rounded-circle btn-outline-primary mr-1 mb-1 btn-lg"
+              >
+                <i class="bx bx-video icon-size"></i>
+              </button>
+              <button
+                type="button"
+                class="btn btn-icon rounded-circle btn-outline-danger mr-1 mb-1 btn-lg"
+              >
+                <i class="bx bx-phone-call icon-size"></i>
+              </button>
+            </div>
+          </div>
         </div>
         <!-- CALENDER END -->
       </div>
