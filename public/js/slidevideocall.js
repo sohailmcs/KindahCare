@@ -1,6 +1,4 @@
 $(document).ready(function () {
-  alert("hell");
-
   $(".slide-left").click(function () {
     if ($(window).width() <= 992) {
       $(".doc-pres-card").css("display", "none");
